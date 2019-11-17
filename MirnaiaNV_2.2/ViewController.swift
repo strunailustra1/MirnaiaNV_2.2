@@ -56,19 +56,20 @@ class ViewController: UIViewController {
         
         
         
-    }
-
-
-    @IBAction func redSliderChnge(_ sender: UISlider) {
-        redValue.text = String(redValueSlider.value)
+        
     }
     
-    @IBAction func greenSliderChange(_ sender: UISlider) {
-        greenValue.text = String(greenValueSlider.value)
+    @IBAction func redSliderChange() {
+        redValue.text = String((100 * redValueSlider.value).rounded() / 100)
     }
     
-    @IBAction func blueSliderChange(_ sender: UISlider) {
-        blueValue.text = String(blueValueSlider.value)
+    @IBAction func greenSliderChange() {
+        greenValue.text = String((100 * greenValueSlider.value).rounded() / 100)
     }
+    
+    @IBAction func blueSliderChange() {
+        blueValue.text = String((100 * blueValueSlider.value).rounded() / 100)
+    }
+    
 }
 

@@ -23,30 +23,30 @@
                                 <rect key="frame" x="16" y="262.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-2f-sNn">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="cMM-Ps-GSf"/>
+                                            <constraint firstAttribute="width" constant="55" id="cMM-Ps-GSf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ln-Kr-p1u">
-                                        <rect key="frame" x="65" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="70" y="0.0" width="35" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="6Oi-C8-BWV"/>
+                                            <constraint firstAttribute="width" constant="35" id="6Oi-C8-BWV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uVQ-9X-y0E">
-                                        <rect key="frame" x="128" y="0.0" width="191" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="bnv-DU-E9q"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="redSliderChnge:" destination="BYZ-38-t0r" eventType="valueChanged" id="hCz-PE-qEA"/>
+                                            <action selector="redSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="fts-tc-W0f"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKc-al-Y8U">
@@ -68,30 +68,30 @@
                                 <rect key="frame" x="16" y="326.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0C-c9-zVL">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="r1r-OW-6hE"/>
+                                            <constraint firstAttribute="width" constant="55" id="r1r-OW-6hE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHu-9P-vd0">
-                                        <rect key="frame" x="65" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="70" y="0.0" width="35" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="kb1-K9-Tkj"/>
+                                            <constraint firstAttribute="width" constant="35" id="kb1-K9-Tkj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-fX-CFp">
-                                        <rect key="frame" x="128" y="0.0" width="191" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="iCj-OB-N8a"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="greenSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tUH-0l-72j"/>
+                                            <action selector="greenSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="bGb-8L-wsC"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-pQ-NIT">
@@ -113,30 +113,30 @@
                                 <rect key="frame" x="16" y="390.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4X-5u-riI">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="fvo-t9-J6z"/>
+                                            <constraint firstAttribute="width" constant="55" id="fvo-t9-J6z"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzS-W8-331">
-                                        <rect key="frame" x="65" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="70" y="0.0" width="35" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="QXQ-md-J06"/>
+                                            <constraint firstAttribute="width" constant="35" id="QXQ-md-J06"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hri-kj-Afe">
-                                        <rect key="frame" x="128" y="0.0" width="191" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="PsN-ML-ZrL"/>
                                         </constraints>
                                         <connections>
-                                            <action selector="blueSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="epp-Dy-FbP"/>
+                                            <action selector="blueSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="jXH-dM-A1H"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-FJ-ESS">
