@@ -101,8 +101,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        let allowedCharacters = [".", "0", "1", "2", "3", "4", "5", "6", "7",
-                                 "8", "9", ""]
+        let allowedCharacters = [".", "0", "1", "2",
+                                 "3", "4", "5", "6",
+                                 "7", "8", "9", ""]
         return allowedCharacters.contains(string)
     }
     
