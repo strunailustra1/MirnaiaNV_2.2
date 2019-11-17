@@ -109,16 +109,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("textFieldShouldEndEditing")
         print(textField.text!)
         
+        guard let textValue = textField.text, !textValue.isEmpty else {
+            return false
+        }
+        
+        guard let textValueFloat = Float(textValue) else {
+            return false
+        }
+        
         switch textField {
         case redValueText:
-            redValueSlider.value = Float(textField.text!)!
-            redValue.text = String(textField.text!)
+            redValueSlider.value = textValueFloat
+            redValue.text = textValue
         case greenValueText:
-            greenValueSlider.value = Float(textField.text!)!
-            greenValue.text = String(textField.text!)
+            greenValueSlider.value = textValueFloat
+            greenValue.text = textValue
         case blueValueText:
-            blueValueSlider.value = Float(textField.text!)!
-            blueValue.text = String(textField.text!)
+            blueValueSlider.value = textValueFloat
+            blueValue.text = textValue
         default:
             break
         }
