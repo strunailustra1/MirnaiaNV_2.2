@@ -45,6 +45,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="bnv-DU-E9q"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="redSliderChnge:" destination="BYZ-38-t0r" eventType="valueChanged" id="hCz-PE-qEA"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKc-al-Y8U">
                                         <rect key="frame" x="332" y="0.0" width="50" height="34"/>
@@ -87,6 +90,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="iCj-OB-N8a"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="greenSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tUH-0l-72j"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-pQ-NIT">
                                         <rect key="frame" x="332" y="0.0" width="50" height="34"/>
@@ -129,6 +135,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="PsN-ML-ZrL"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="blueSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="epp-Dy-FbP"/>
+                                        </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-FJ-ESS">
                                         <rect key="frame" x="332" y="0.0" width="50" height="34"/>

@@ -33,9 +33,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redLabel.text = "Red"
-        greenLabel.text = "Green"
-        blueLabel.text = "Blue"
+        redLabel.text = "Red:"
+        greenLabel.text = "Green:"
+        blueLabel.text = "Blue:"
         
         redValueSlider.minimumValue = 0.0
         redValueSlider.maximumValue = 1.0
@@ -59,5 +59,16 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func redSliderChnge(_ sender: UISlider) {
+        redValue.text = String(redValueSlider.value)
+    }
+    
+    @IBAction func greenSliderChange(_ sender: UISlider) {
+        greenValue.text = String(greenValueSlider.value)
+    }
+    
+    @IBAction func blueSliderChange(_ sender: UISlider) {
+        blueValue.text = String(blueValueSlider.value)
+    }
 }
 
