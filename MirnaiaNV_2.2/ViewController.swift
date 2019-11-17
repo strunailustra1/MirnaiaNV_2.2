@@ -14,7 +14,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    
     @IBOutlet var redValue: UILabel!
     @IBOutlet var greenValue: UILabel!
     @IBOutlet var blueValue: UILabel!
@@ -29,7 +28,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var colorOfView: UIView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +36,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         redLabel.text = "Red:"
         greenLabel.text = "Green:"
         blueLabel.text = "Blue:"
-        
         
         redValueSlider.value = 0.25
         redValueSlider.minimumValue = 0.0
@@ -70,9 +67,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         changeViewColor()
     }
-    
-    
- 
+
     @IBAction func redSliderChange() {
         let roundRedValue = String((100 * redValueSlider.value).rounded() / 100)
         redValue.text = roundRedValue
@@ -86,16 +81,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         greenValueText.text = roundGreenValue
         changeViewColor()
     }
-      
     
     @IBAction func blueSliderChange() {
         let roundBlueValue =  String((100 * blueValueSlider.value).rounded() / 100)
         blueValue.text = roundBlueValue
         blueValueText.text = roundBlueValue
         changeViewColor()
-        
-        print(blueValueSlider.value)
-        
     }
     
     private func changeViewColor () {
@@ -107,12 +98,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         )
         colorOfView.backgroundColor = color
     }
-    
-
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        print("textFieldShouldBeginEditing")
-        return true
-    }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -122,9 +107,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        print("textFieldShouldEndEditing")
-        print(textField.text!)
-        
         guard var textValue = textField.text, !textValue.isEmpty else {
             return false
         }
@@ -163,16 +145,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn")
-        print(textField.text!)
-        
         textField.resignFirstResponder()
         
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -183,3 +158,36 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
+extension UITextField{
+    
+    @IBInspectable var doneAccessory: Bool{
+        get{
+            return self.doneAccessory
+        }
+        set (hasDone) {
+            if hasDone{
+                addDoneButtonOnKeyboard()
+            }
+        }
+    }
+    
+    func addDoneButtonOnKeyboard()
+    {
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        self.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneButtonAction()
+    {
+        self.resignFirstResponder()
+    }
+}
