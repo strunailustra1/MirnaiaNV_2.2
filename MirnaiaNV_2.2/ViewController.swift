@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        colorOfView.layer.cornerRadius = 20
         
         redLabel.text = "Red:"
         greenLabel.text = "Green:"
@@ -71,6 +71,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         changeViewColor()
     }
     
+    
+ 
     @IBAction func redSliderChange() {
         let roundRedValue = String((100 * redValueSlider.value).rounded() / 100)
         redValue.text = roundRedValue
@@ -97,7 +99,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func changeViewColor () {
-        let color = UIColor.init(red: CGFloat(redValueSlider.value), green: CGFloat(greenValueSlider.value), blue: CGFloat(blueValueSlider.value), alpha: CGFloat(1.0))
+        let color = UIColor.init(
+            red: CGFloat(redValueSlider.value),
+            green: CGFloat(greenValueSlider.value),
+            blue: CGFloat(blueValueSlider.value),
+            alpha: CGFloat(1.0)
+        )
         colorOfView.backgroundColor = color
     }
     
@@ -108,36 +115,44 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-     
-        //print(range)
-        print(string)
+        
         let allowedCharacters = [".", "0", "1", "2", "3", "4", "5", "6", "7",
-                                "8", "9", ""]
-       return allowedCharacters.contains(string)
+                                 "8", "9", ""]
+        return allowedCharacters.contains(string)
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         print("textFieldShouldEndEditing")
         print(textField.text!)
         
-        guard let textValue = textField.text, !textValue.isEmpty else {
+        guard var textValue = textField.text, !textValue.isEmpty else {
             return false
         }
         
-        guard let textValueFloat = Float(textValue) else {
+        guard var textValueFloat = Float(textValue) else {
             return false
         }
+        
+        textValueFloat = (100 * textValueFloat).rounded() / 100
+        
+        textValueFloat = textValueFloat > 1.0 ? 1.0 : textValueFloat
+        textValueFloat = textValueFloat < 0.0 ? 0.0 : textValueFloat
+        
+        textValue = String(textValueFloat)
         
         switch textField {
         case redValueText:
             redValueSlider.value = textValueFloat
             redValue.text = textValue
+            redValueText.text = textValue
         case greenValueText:
             greenValueSlider.value = textValueFloat
             greenValue.text = textValue
+            greenValueText.text = textValue
         case blueValueText:
             blueValueSlider.value = textValueFloat
             blueValue.text = textValue
+            blueValueText.text = textValue
         default:
             break
         }

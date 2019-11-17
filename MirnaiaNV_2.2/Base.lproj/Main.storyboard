@@ -155,7 +155,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.72087143921304841" green="1" blue="0.79322448889460706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.1030086149974435" green="0.3158602193579092" blue="0.54452720207253891" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="FyH-w8-1pp" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.2" id="0sa-m3-SFs"/>
                             <constraint firstItem="FyH-w8-1pp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3x7-at-RUF"/>
