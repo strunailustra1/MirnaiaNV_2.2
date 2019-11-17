@@ -33,6 +33,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         redLabel.text = "Red:"
         greenLabel.text = "Green:"
         blueLabel.text = "Blue:"
@@ -104,6 +106,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("textFieldShouldBeginEditing")
         return true
     }
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+     
+        //print(range)
+        print(string)
+        let allowedCharacters = [".", "0", "1", "2", "3", "4", "5", "6", "7",
+                                "8", "9", ""]
+       return allowedCharacters.contains(string)
+    }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         print("textFieldShouldEndEditing")
@@ -143,6 +154,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("textFieldDidEndEditing")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
     }
 }
 

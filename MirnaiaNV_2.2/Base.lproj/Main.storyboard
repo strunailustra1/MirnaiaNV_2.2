@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uVQ-9X-y0E">
-                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="196" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="bnv-DU-E9q"/>
                                         </constraints>
@@ -50,9 +50,9 @@
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKc-al-Y8U">
-                                        <rect key="frame" x="332" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="327" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="fme-xv-gpw"/>
+                                            <constraint firstAttribute="width" constant="55" id="fme-xv-gpw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -86,7 +86,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jfE-fX-CFp">
-                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="196" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="iCj-OB-N8a"/>
                                         </constraints>
@@ -95,9 +95,9 @@
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-pQ-NIT">
-                                        <rect key="frame" x="332" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="327" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="yuJ-yV-00K"/>
+                                            <constraint firstAttribute="width" constant="55" id="yuJ-yV-00K"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -131,7 +131,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hri-kj-Afe">
-                                        <rect key="frame" x="118" y="0.0" width="201" height="35"/>
+                                        <rect key="frame" x="118" y="0.0" width="196" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="2000" id="PsN-ML-ZrL"/>
                                         </constraints>
@@ -140,9 +140,9 @@
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-FJ-ESS">
-                                        <rect key="frame" x="332" y="0.0" width="50" height="34"/>
+                                        <rect key="frame" x="327" y="0.0" width="55" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="kXA-xO-MAi"/>
+                                            <constraint firstAttribute="width" constant="55" id="kXA-xO-MAi"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
