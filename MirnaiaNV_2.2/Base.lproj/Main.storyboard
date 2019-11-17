@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,11 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-w8-1pp">
-                                <rect key="frame" x="16" y="64" width="382" height="163.5"/>
+                                <rect key="frame" x="16" y="63.999999999999986" width="382" height="163.66666666666663"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PdM-Nu-HIk">
-                                <rect key="frame" x="16" y="262.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="262.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-2f-sNn">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
@@ -62,7 +62,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NOB-4M-awD">
-                                <rect key="frame" x="16" y="326.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="326.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0C-c9-zVL">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
@@ -104,7 +104,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="siH-QM-dPe">
-                                <rect key="frame" x="16" y="390.5" width="382" height="34"/>
+                                <rect key="frame" x="16" y="390.66666666666669" width="382" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4X-5u-riI">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="34"/>
@@ -164,6 +164,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="EzS-W8-331" id="kCr-c7-i2g"/>
+                        <outlet property="blueValue" destination="EzS-W8-331" id="nNv-nw-f94"/>
+                        <outlet property="blueValueSlider" destination="Hri-kj-Afe" id="v1p-vT-6eD"/>
+                        <outlet property="blueValueText" destination="U8I-FJ-ESS" id="SEd-XL-6U8"/>
+                        <outlet property="colorOfView" destination="FyH-w8-1pp" id="oek-f3-ko5"/>
+                        <outlet property="greenLabel" destination="G0C-c9-zVL" id="umt-9O-DDi"/>
+                        <outlet property="greenValue" destination="fHu-9P-vd0" id="sxk-Gk-GqP"/>
+                        <outlet property="greenValueSlider" destination="jfE-fX-CFp" id="mwz-8w-IFs"/>
+                        <outlet property="greenValueText" destination="MfK-pQ-NIT" id="7zz-FN-J7X"/>
+                        <outlet property="redLabel" destination="pdc-2f-sNn" id="l3E-15-lwB"/>
+                        <outlet property="redValue" destination="3ln-Kr-p1u" id="eoM-wW-cuF"/>
+                        <outlet property="redValueSlider" destination="uVQ-9X-y0E" id="cp8-vI-XmB"/>
+                        <outlet property="redValueText" destination="TKc-al-Y8U" id="UGZ-Lj-rUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
