@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
+    
     @IBOutlet var redValue: UILabel!
     @IBOutlet var greenValue: UILabel!
     @IBOutlet var blueValue: UILabel!
@@ -31,22 +32,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         redLabel.text = "Red"
         greenLabel.text = "Green"
         blueLabel.text = "Blue"
         
-//        redValueSlider.minimumValue = 0.0
-//        redValueSlider.maximumValue = 1.0
-//
-//        greenValueSlider.minimumValue = 0.0
-//        greenValueSlider.maximumValue = 1.0
-//
-//        blueValueSlider.minimumValue = 0.0
-//        blueValueSlider.maximumValue = 1.0
-//
-//        redValueSlider.tintColor = .red
-//        greenValueSlider.tintColor = .green
-//        blueValueSlider.tintColor = .blue
+        redValueSlider.minimumValue = 0.0
+        redValueSlider.maximumValue = 1.0
+
+        greenValueSlider.minimumValue = 0.0
+        greenValueSlider.maximumValue = 1.0
+
+        blueValueSlider.minimumValue = 0.0
+        blueValueSlider.maximumValue = 1.0
+
+        redValueSlider.tintColor = .red
+        greenValueSlider.tintColor = .green
+        blueValueSlider.tintColor = .blue
         
         redValue.text = String(redValueSlider.value)
         greenValue.text = String(greenValueSlider.value)

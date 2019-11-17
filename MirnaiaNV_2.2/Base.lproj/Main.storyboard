@@ -165,7 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueLabel" destination="EzS-W8-331" id="kCr-c7-i2g"/>
+                        <outlet property="blueLabel" destination="C4X-5u-riI" id="WeX-0C-g0r"/>
                         <outlet property="blueValue" destination="EzS-W8-331" id="nNv-nw-f94"/>
                         <outlet property="blueValueSlider" destination="Hri-kj-Afe" id="v1p-vT-6eD"/>
                         <outlet property="blueValueText" destination="U8I-FJ-ESS" id="SEd-XL-6U8"/>
