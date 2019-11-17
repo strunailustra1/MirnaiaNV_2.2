@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
@@ -37,12 +37,16 @@ class ViewController: UIViewController {
         greenLabel.text = "Green:"
         blueLabel.text = "Blue:"
         
+        
+        redValueSlider.value = 0.25
         redValueSlider.minimumValue = 0.0
         redValueSlider.maximumValue = 1.0
 
+        greenValueSlider.value = 0.5
         greenValueSlider.minimumValue = 0.0
         greenValueSlider.maximumValue = 1.0
 
+        blueValueSlider.value = 0.75
         blueValueSlider.minimumValue = 0.0
         blueValueSlider.maximumValue = 1.0
 
@@ -58,9 +62,11 @@ class ViewController: UIViewController {
         greenValueText.text = String(greenValueSlider.value)
         blueValueText.text = String(blueValueSlider.value)
         
+        redValueText.delegate = self
+        greenValueText.delegate = self
+        blueValueText.delegate = self
+        
         changeViewColor()
-        
-        
     }
     
     @IBAction func redSliderChange() {
@@ -84,6 +90,8 @@ class ViewController: UIViewController {
         blueValueText.text = roundBlueValue
         changeViewColor()
         
+        print(blueValueSlider.value)
+        
     }
     
     private func changeViewColor () {
@@ -91,5 +99,42 @@ class ViewController: UIViewController {
         colorOfView.backgroundColor = color
     }
     
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldBeginEditing")
+        return true
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        print("textFieldShouldEndEditing")
+        print(textField.text!)
+        
+        switch textField {
+        case redValueText:
+            redValueSlider.value = Float(textField.text!)!
+            redValue.text = String(textField.text!)
+        case greenValueText:
+            greenValueSlider.value = Float(textField.text!)!
+            greenValue.text = String(textField.text!)
+        case blueValueText:
+            blueValueSlider.value = Float(textField.text!)!
+            blueValue.text = String(textField.text!)
+        default:
+            break
+        }
+        
+        changeViewColor()
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("textFieldShouldReturn")
+        print(textField.text!)
+        
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }
 
