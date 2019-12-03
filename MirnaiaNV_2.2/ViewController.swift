@@ -33,26 +33,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         colorOfView.layer.cornerRadius = 20
         
-        redLabel.text = "Red:"
-        greenLabel.text = "Green:"
-        blueLabel.text = "Blue:"
-        
-        redValueSlider.value = 0.25
-        redValueSlider.minimumValue = 0.0
-        redValueSlider.maximumValue = 1.0
-
-        greenValueSlider.value = 0.5
-        greenValueSlider.minimumValue = 0.0
-        greenValueSlider.maximumValue = 1.0
-
-        blueValueSlider.value = 0.75
-        blueValueSlider.minimumValue = 0.0
-        blueValueSlider.maximumValue = 1.0
-
-        redValueSlider.tintColor = .red
-        greenValueSlider.tintColor = .green
-        blueValueSlider.tintColor = .blue
-        
         redValue.text = String(redValueSlider.value)
         greenValue.text = String(greenValueSlider.value)
         blueValue.text = String(blueValueSlider.value)
@@ -90,13 +70,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func changeViewColor () {
-        let color = UIColor.init(
+        colorOfView.backgroundColor = UIColor(
             red: CGFloat(redValueSlider.value),
             green: CGFloat(greenValueSlider.value),
             blue: CGFloat(blueValueSlider.value),
             alpha: CGFloat(1.0)
         )
-        colorOfView.backgroundColor = color
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
