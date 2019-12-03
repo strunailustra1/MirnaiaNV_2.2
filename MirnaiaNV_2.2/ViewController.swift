@@ -33,18 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         colorOfView.layer.cornerRadius = 20
         
-        redValue.text = String(redValueSlider.value)
-        greenValue.text = String(greenValueSlider.value)
-        blueValue.text = String(blueValueSlider.value)
-        
-        redValueText.text = String(redValueSlider.value)
-        greenValueText.text = String(greenValueSlider.value)
-        blueValueText.text = String(blueValueSlider.value)
-        
-        redValueText.delegate = self
-        greenValueText.delegate = self
-        blueValueText.delegate = self
-        
+        setInitialText()
         changeViewColor()
     }
     
@@ -65,15 +54,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
         changeViewColor()
-    }
-    
-    private func changeViewColor () {
-        colorOfView.backgroundColor = UIColor(
-            red: CGFloat(redValueSlider.value),
-            green: CGFloat(greenValueSlider.value),
-            blue: CGFloat(blueValueSlider.value),
-            alpha: CGFloat(1.0)
-        )
     }
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -133,6 +113,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
+    }
+    
+    private func setInitialText () {
+        redValue.text = String(redValueSlider.value)
+        greenValue.text = String(greenValueSlider.value)
+        blueValue.text = String(blueValueSlider.value)
+        
+        redValueText.text = String(redValueSlider.value)
+        greenValueText.text = String(greenValueSlider.value)
+        blueValueText.text = String(blueValueSlider.value)
+    }
+    
+    private func changeViewColor () {
+        colorOfView.backgroundColor = UIColor(
+            red: CGFloat(redValueSlider.value),
+            green: CGFloat(greenValueSlider.value),
+            blue: CGFloat(blueValueSlider.value),
+            alpha: CGFloat(1.0)
+        )
     }
 }
 
