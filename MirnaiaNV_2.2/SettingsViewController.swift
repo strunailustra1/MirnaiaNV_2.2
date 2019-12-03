@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class SettingsViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
