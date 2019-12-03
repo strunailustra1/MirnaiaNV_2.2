@@ -47,25 +47,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         changeViewColor()
     }
-
-    @IBAction func redSliderChange() {
-        let roundRedValue = String((100 * redValueSlider.value).rounded() / 100)
-        redValue.text = roundRedValue
-        redValueText.text = roundRedValue
-        changeViewColor()
-    }
     
-    @IBAction func greenSliderChange() {
-        let roundGreenValue = String((100 * greenValueSlider.value).rounded() / 100)
-        greenValue.text = roundGreenValue
-        greenValueText.text = roundGreenValue
-        changeViewColor()
-    }
-    
-    @IBAction func blueSliderChange() {
-        let roundBlueValue =  String((100 * blueValueSlider.value).rounded() / 100)
-        blueValue.text = roundBlueValue
-        blueValueText.text = roundBlueValue
+    @IBAction func sliderChange(_ sender: UISlider) {
+        let roundSliderValue = String((100 * sender.value).rounded() / 100)
+        switch sender {
+        case redValueSlider:
+            redValue.text = roundSliderValue
+            redValueText.text = roundSliderValue
+        case greenValueSlider:
+            greenValue.text = roundSliderValue
+            greenValueText.text = roundSliderValue
+        case blueValueSlider:
+            blueValue.text = roundSliderValue
+            blueValueText.text = roundSliderValue
+        default:
+            break
+        }
+        
         changeViewColor()
     }
     

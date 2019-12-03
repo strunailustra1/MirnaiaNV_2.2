@@ -47,7 +47,7 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="redSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="fts-tc-W0f"/>
+                                            <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="ptk-jQ-Mqh"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TKc-al-Y8U">
@@ -96,7 +96,7 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="greenSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="bGb-8L-wsC"/>
+                                            <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="qEw-Bn-vTZ"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MfK-pQ-NIT">
@@ -145,7 +145,7 @@
                                         </constraints>
                                         <color key="minimumTrackTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <action selector="blueSliderChange" destination="BYZ-38-t0r" eventType="valueChanged" id="jXH-dM-A1H"/>
+                                            <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="1DH-4c-vTv"/>
                                         </connections>
                                     </slider>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-FJ-ESS">
