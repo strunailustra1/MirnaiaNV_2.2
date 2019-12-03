@@ -28,6 +28,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var colorOfView: UIView!
     
+    var mainVCBackgroundColor: UIColor!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         setInitialText()
         changeViewColor()
+        
     }
     
     @IBAction func sliderChange(_ sender: UISlider) {
