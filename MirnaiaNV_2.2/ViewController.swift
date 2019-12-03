@@ -55,14 +55,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         changeViewColor()
     }
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let allowedCharacters = [".", "0", "1", "2",
-                                 "3", "4", "5", "6",
-                                 "7", "8", "9", ""]
-        return allowedCharacters.contains(string)
-    }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         guard var textValue = textField.text, !textValue.isEmpty else {
@@ -102,12 +94,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let _ = touches.first {
             view.endEditing(true)
@@ -137,7 +123,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 // https://medium.com/swift2go/swift-add-keyboard-done-button-using-uitoolbar-c2bea50a12c7
 extension UITextField{
-    
+    // устанавливаем данный переключатель на сториборде для каждого текстового поля
     @IBInspectable var doneAccessory: Bool{
         get{
             return self.doneAccessory
