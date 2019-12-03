@@ -8,8 +8,11 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController, UITextFieldDelegate {
+protocol ColorSettingsProtocol {
+    var colorSettings: UIColor { get }
+}
 
+class SettingsViewController: UIViewController, UITextFieldDelegate, ColorSettingsProtocol {
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
@@ -30,6 +33,15 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     
     var mainVCBackgroundColor: UIColor!
     
+    var colorSettings: UIColor {
+        UIColor(
+            red: CGFloat(redValueSlider.value),
+            green: CGFloat(greenValueSlider.value),
+            blue: CGFloat(blueValueSlider.value),
+            alpha: CGFloat(1.0)
+        )
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +50,13 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         setInitialColor()
         setInitialText()
         changeViewColor()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let _ = touches.first {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
     }
     
     @IBAction func sliderChange(_ sender: UISlider) {
@@ -57,6 +76,9 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         }
         
         changeViewColor()
+    }
+    
+    @IBAction func donePressed() {
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -96,14 +118,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let _ = touches.first {
-            view.endEditing(true)
-        }
-        super.touchesBegan(touches, with: event)
-    }
-    
+
     private func setInitialColor() {
         var red: CGFloat = 0
         var green: CGFloat = 0
@@ -132,12 +147,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func changeViewColor () {
-        colorOfView.backgroundColor = UIColor(
-            red: CGFloat(redValueSlider.value),
-            green: CGFloat(greenValueSlider.value),
-            blue: CGFloat(blueValueSlider.value),
-            alpha: CGFloat(1.0)
-        )
+        colorOfView.backgroundColor = colorSettings
     }
 }
 
