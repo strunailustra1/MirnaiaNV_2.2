@@ -12,6 +12,10 @@ protocol ColorSettingsProtocol {
     var colorSettings: UIColor { get }
 }
 
+protocol SettingsViewControllerDelegate {
+    func applyColorSettings(_ color: UIColor)
+}
+
 class SettingsViewController: UIViewController, UITextFieldDelegate, ColorSettingsProtocol {
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
@@ -41,6 +45,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, ColorSettin
             alpha: CGFloat(1.0)
         )
     }
+    
+    var delegate: SettingsViewControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +85,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, ColorSettin
     }
     
     @IBAction func donePressed() {
+        delegate.applyColorSettings(colorSettings)
+        dismiss(animated: true)
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
