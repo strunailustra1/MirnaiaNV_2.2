@@ -34,10 +34,10 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         colorOfView.layer.cornerRadius = 20
-        
+
+        setInitialColor()
         setInitialText()
         changeViewColor()
-        
     }
     
     @IBAction func sliderChange(_ sender: UISlider) {
@@ -102,6 +102,23 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
             view.endEditing(true)
         }
         super.touchesBegan(touches, with: event)
+    }
+    
+    private func setInitialColor() {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+
+        mainVCBackgroundColor.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        
+        redValueSlider.value = roundCGFloat(red)
+        greenValueSlider.value = roundCGFloat(green)
+        blueValueSlider.value = roundCGFloat(blue)
+    }
+    
+    private func roundCGFloat(_ value: CGFloat) -> Float {
+         Float((100 * value).rounded() / 100)
     }
     
     private func setInitialText () {
