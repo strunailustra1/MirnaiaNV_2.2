@@ -198,8 +198,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRn-f5-LUt">
-                                <rect key="frame" x="141" y="488" width="38" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <rect key="frame" x="137.5" y="484" width="45" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -210,9 +210,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1030086149974435" green="0.3158602193579092" blue="0.54452720207253891" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NRn-f5-LUt" secondAttribute="bottom" constant="50" id="0i1-hh-zCq"/>
                             <constraint firstItem="FyH-w8-1pp" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.2" id="0sa-m3-SFs"/>
-                            <constraint firstItem="NRn-f5-LUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gM-OZ-66o"/>
                             <constraint firstItem="FyH-w8-1pp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3x7-at-RUF"/>
                             <constraint firstItem="PdM-Nu-HIk" firstAttribute="top" secondItem="FyH-w8-1pp" secondAttribute="bottom" constant="35" id="5s5-iJ-LAr"/>
                             <constraint firstItem="FyH-w8-1pp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9LD-In-fxS"/>
@@ -221,7 +219,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PdM-Nu-HIk" secondAttribute="trailing" constant="16" id="XbL-GC-Cn0"/>
                             <constraint firstItem="siH-QM-dPe" firstAttribute="top" secondItem="NOB-4M-awD" secondAttribute="bottom" constant="30" id="dVQ-H4-qPb"/>
                             <constraint firstItem="NOB-4M-awD" firstAttribute="top" secondItem="PdM-Nu-HIk" secondAttribute="bottom" constant="30" id="eWU-Eg-FCz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NRn-f5-LUt" secondAttribute="bottom" constant="50" id="fxZ-jy-Ru0"/>
                             <constraint firstItem="siH-QM-dPe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gl4-lc-Y5m"/>
+                            <constraint firstItem="NRn-f5-LUt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWv-kV-kZ5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NOB-4M-awD" secondAttribute="trailing" constant="16" id="tdl-gq-GsN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="siH-QM-dPe" secondAttribute="trailing" constant="16" id="xhd-q9-uAP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FyH-w8-1pp" secondAttribute="trailing" constant="16" id="xlh-Gb-bno"/>
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="125"/>
+            <point key="canvasLocation" x="847.5" y="124.64788732394366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3DR-Zy-6GZ">
